@@ -3,14 +3,16 @@ import SignUpAuth from "./auth/sign-up/sign-up"
 import { Navbar } from "./components/Navbar"
 import SignInAuth from "./auth/sign-in/sign-in"
 import SocketConnection from "./socket/Socket"
-
+import HomePage from "./landingpage/Home/Home"
 
 function App() {
   return (
     <BrowserRouter>
+
     <SocketConnection/>
     <Navbar/>
       <Routes>
+      <Route path="/home" element={<HomePage />} />
       <Route path="/sign-up" element={<SignUpAuth />} />
       <Route path="/sign-in" element={<SignInAuth />} />
       </Routes>
