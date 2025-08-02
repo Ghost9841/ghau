@@ -2,14 +2,13 @@ import { Route, BrowserRouter, Routes } from "react-router-dom"
 import SignUpAuth from "./auth/sign-up/sign-up"
 import { Navbar } from "./components/Navbar"
 import SignInAuth from "./auth/sign-in/sign-in"
-
-
+import SocketConnection from "./socket/Socket"
 
 
 function App() {
-
   return (
     <BrowserRouter>
+    <SocketConnection/>
     <Navbar/>
       <Routes>
       <Route path="/sign-up" element={<SignUpAuth />} />
