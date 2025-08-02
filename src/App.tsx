@@ -4,7 +4,7 @@ import SignUpAuth from "./auth/sign-up/sign-up"
 import SignInAuth from "./auth/sign-in/sign-in"
 import SocketConnection from "./socket/Socket"
 import Home from "./landingpage/Home/Home"
-import MessageBox from "./features/Message/MessageBox"
+// import MessageBox from "./features/Message/MessageBox"
 
 function App() {
   return (

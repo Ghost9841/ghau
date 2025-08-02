@@ -1,6 +1,6 @@
 import { Settings } from "lucide-react";
 import { useState } from "react";
-import banner from '@/assets/banner.jpeg'
+import banner from '@/assets/banner-removebg-preview.png'
 import logo from '@/assets/logo.png'
 interface Props{
   onSettingsClick: () => void
@@ -9,13 +9,18 @@ const HomePage = ( { onSettingsClick }:Props) => {
   const [name, setName] = useState('');
 
   return (
-    <div className="min-h-screen relative overflow-hidden" style={{backgroundImage: ''}}>
+    <div className="min-h-screen relative overflow-hidden">
       {/* Background banner */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-red-900 to-gray-900">
-        <div className="absolute inset-0 justify-center flex items-center w-full  bg-black/30" />
-       {/* <img src={banner} alt="la hai banner aayo hai" /> */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICA8cGF0aCBkPSJNIDEwIDAgTCAwIDAgMCAxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMSkiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPC9wYXR0ZXJuPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4=')] opacity-20" />
-      </div>
+  <div className="absolute inset-0 bg-gradient-to-br from-black via-red-900 to-gray-900">
+
+    <div className=" w-full h-full">
+  <img 
+    src={banner} 
+    alt="la hai banner aayo hai" 
+    className="w-full h-full object-contain opacity-80 absolute inset-0"
+  />
+</div>
+    </div>
 
       {/* Settings icon */}
       <div className="absolute top-6 right-6 z-10">
